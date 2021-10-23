@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demographics</title>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/demographics.css")}}'>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/common.css")}}'>
+</head>
+<body>
+	<div id='header'>The Makeup of DALI Lab</div>
+	<div id='main-section-wrapper'>
+		<div id='charts-wrapper'>
+			{% for t in distributions %}
+				<div class='chart-title'>{{t}}:</div>
+				<div class='chart-wrapper'>
+					<div class='chart'>
+						{% for e in distributions[t] %}
+							<div class='chart-element' style='width: {{distributions[t][e]["percentage"]}}%; background-color: {{distributions[t][e]["color"]}};'>
+							</div>	
+						{% endfor %}
+					</div>
+					<div class='chart-labels'>
+						{% for e in distributions[t] %}
+							<div class='chart-label'>
+								<div class='chart-label-color' style="background-color: {{distributions[t][e]["color"]}};"></div>
+								<div class='chart-label-text'>{{e}}</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+			
+		</div>
+		<div id='create-member-wrapper'>
+			<div id='create-member-header'>Generate Member</div>
+			<div id='create-member-sub'>(Based on Data, Random Pic)</div>
+			<div id='member-wrapper'>
+				{% for k in member %}
+					{% if k == 'picture' %}
+						<div class='member-picture' style="background-image:url({{member[k]}});"></div>
+					{% elif k == 'name' %}
+						<div class='member-name'>{{member[k]}}</div>
+					{% else %}
+						<div class='member-attribute'>
+							{% if  colormap[k][member[k]] %}
+								<div class='member-attribute-color' style="background-color: {{colormap[k][member[k]]}};"></div>
+							{% else %}
+								<div class='member-attribute-color' style="background-color: {{colormap['d']['d']}};"></div>
+							{% endif %}
+							<div class='member-attribute-label'>{{k}}</div>
+							<div class='member-attribute-text'>{{member[k]}}</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+				<div class='member-chance'>Chance of Appearing in Dataset: {{chance}}%</div>
+				<div class='member-chance-sub'>(Doesn't take FAVORITECOLOR, ROLE or AGE into account)*</div>
+				<a href='/demographics'>
+					<div id='create-new-button'>Create New!
+					</div>
+				</a>	
+			</div>
+			
+		</div>
+	</div>	
+</body>
+</html>

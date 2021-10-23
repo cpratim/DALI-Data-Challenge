@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DALI Data Visualization</title>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/index.css")}}'>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/common.css")}}'>
+</head>
+<body>
+<div id='pics-wrapper'>
+	{% for row in pics %}
+		<div class='pics-row'>
+			{% for n, pic in row %}
+				<div class='bg-pic' id='pic{{n+1}}' style="background-image: url('static/images/{{pic}}')"></div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
+<div id='landing-wrapper'>
+	<div id='landing-wrapper-text'>
+		<div id='landing-heading'>DALI Data Challenge</div>
+		<div id='landing-description'>Interesting findings from the DALI Datasets!</div>
+		<a href='/demographics'>
+			<div id='button-wrapper'>
+				<div id='button'>
+					<div id='button-text'>Part 1: Demographics</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+</body>
+
+<script src='{{url_for("static", filename="js/index.js")}}'></script>
+</html>
