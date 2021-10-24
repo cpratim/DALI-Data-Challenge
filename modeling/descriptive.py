@@ -63,7 +63,7 @@ def web_distribution(var, min_p = 2):
 		sorted(d, key=lambda x: x[1], reverse=True)
 	):	
 		color_dist[var.upper()][k] = bar_colors[n]
-		dist[k] = {'percentage': '{:.2f}'.format(p), 'color': bar_colors[n]}
+		dist[k] = {'percentage': '{:.2f}'.format(p), 'color': bar_colors[n], 'pf': p}
 	return dist
 
 default_vars = ['year', 'race', 'gender', 'major', 'phoneType', 'region', 'age', 'favoriteColor', 'role']

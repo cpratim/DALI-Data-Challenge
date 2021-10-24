@@ -50,12 +50,16 @@ body {
 	margin-left: 10px;
 }
 
-
+.chart-element-inner-text {
+	margin-top: 10px;
+}
 
 .chart-element {
 	height: 100%;
 	opacity: 1;
 	transition: .5s all;
+	color: white;
+	text-align: center;
 }
 
 .chart-element:hover {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Modeling</title>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/modeling.css")}}'>
+	<link rel="stylesheet" href='{{url_for("static", filename="css/common.css")}}'>
+</head>
+<body>
+	<div id='header'>Modeling Anonymous Data</div>
+
+	<center>
+		<div id='disc'>Sorry for the bad UI, I just didnt have any time to make it look better</div>
+		<form id='input-form' action='/modeling' method="POST">
+			<label id='predict-label'>Variable you want to predict</label>
+			<select name='feature'>
+				{% for f in features %}
+					{% if f != 'year' %}
+					<option value={{f}}>{{f}}</option>
+					{% endif %}
+				{% endfor %}
+			</select>
+			<br>
+			{% for f in features %}
+				<label class='valueother'>Value for {{f}}</label>
+				<select name={{f}}>
+					{% for n in ranges[f] %}
+						<option value={{n}}>{{n}}</option>
+					{% endfor %}
+				</select>
+
+				<br>
+			{% endfor %}
+			<input type="submit" value="Predict!" id='submit-button'>
+			<div id='prediction'>Prediction: {{pred}}</div>
+		</form>
+	</center>
+</body>
+</html>

@@ -15,16 +15,25 @@
 				<div class='chart-wrapper'>
 					<div class='chart'>
 						{% for e in distributions[t] %}
-							<div class='chart-element' style='width: {{distributions[t][e]["percentage"]}}%; background-color: {{distributions[t][e]["color"]}};'>
-							</div>	
+							{% if distributions[t][e]["pf"] > 15%}
+								<div class='chart-element' style='width: {{distributions[t][e]["percentage"]}}%; background-color: {{distributions[t][e]["color"]}};'>
+									<div class='chart-element-inner-text'>{{e}}: {{distributions[t][e]["percentage"]}}%</div>
+								</div>	
+							{% else %}
+								<div class='chart-element' style='width: {{distributions[t][e]["percentage"]}}%; background-color: {{distributions[t][e]["color"]}};'>
+
+								</div>	
+							{% endif %}
 						{% endfor %}
 					</div>
 					<div class='chart-labels'>
 						{% for e in distributions[t] %}
-							<div class='chart-label'>
-								<div class='chart-label-color' style="background-color: {{distributions[t][e]["color"]}};"></div>
-								<div class='chart-label-text'>{{e}}</div>
-							</div>
+							{% if distributions[t][e]["pf"] < 15 %}
+								<div class='chart-label'>
+									<div class='chart-label-color' style="background-color: {{distributions[t][e]["color"]}};"></div>
+									<div class='chart-label-text'>{{e}}</div>
+								</div>
+							{% endif %}
 						{% endfor %}
 					</div>
 				</div>

@@ -1,0 +1,58 @@
+{
+	"year": {
+		"correlation": 0.20006951080321003, 
+		"accuracy": 0.0
+	}, 
+	"gender": {
+		"correlation": 0.6246841869387962, 
+		"accuracy": 0.8571428571428571
+	}, 
+	"heightInches": {
+		"correlation": 0.5127640979231713, 
+		"accuracy": 0.0
+	}, 
+	"happiness": {
+		"correlation": 0.3239844925444457, 
+		"accuracy": 0.0
+	}, 
+	"stressed": {
+		"correlation": 0.23023404061307842, 
+		"accuracy": 0.0
+	}, 
+	"sleepPerNight": {
+		"correlation": 0.18545341485212338, 
+		"accuracy": 0.0
+	}, 
+	"socialDinnerPerWeek": {
+		"correlation": 0.6274694517652297, 
+		"accuracy": 0.07142857142857142
+	}, 
+	"alcoholDrinksPerWeek": {
+		"correlation": 0.39030925537015787, 
+		"accuracy": 0.07142857142857142
+	}, 
+	"caffeineRating": {
+		"correlation": 0.907103732745937, 
+		"accuracy": 0.2857142857142857
+	}, 
+	"affiliated": {
+		"correlation": 0.6455153720043185, 
+		"accuracy": 0.7857142857142857
+	}, 
+	"numOfLanguages": {
+		"correlation": 0.4348823907557477, 
+		"accuracy": 0.2857142857142857
+	}, 
+	"gymPerWeek": {
+		"correlation": 0.48210511326220234, 
+		"accuracy": 0.21428571428571427
+	}, 
+	"hoursOnScreen": {
+		"correlation": 0.6455268993345632, 
+		"accuracy": 0.0
+	}, 
+	"phoneType": {
+		"correlation": 0.41842129085815427, 
+		"accuracy": 0.9285714285714286
+	}
+}
