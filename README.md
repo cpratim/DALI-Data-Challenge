@@ -6,7 +6,7 @@
 
 ## Temporary Website
 
-(https://dali-data-challenge.herokuapp.com/demographics)
+(https://dali-data-challenge.herokuapp.com/)
 
 Everything is written from scratch using the Flask framework 
 for the webserver and HTML + CSS to diplay frontend
