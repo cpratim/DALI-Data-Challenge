@@ -32,7 +32,19 @@ feature besides that in the training set, and the target feature in the y set.
 For high value prediction such as the Height or Year it was scaled down, but other
 than that the correlations were high for every other output. 
 
-Feature | Year | Gender | Height | Happiness | Stressed | Speep | Social Dinners | Alcohol Drinks | Caffeine Rating | Affiliated | Num Languages | Gym | Screen Hours | Phone Type |
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |---
-Correlation | .200 | 0.857 | .513 | .324 | .230 | .185 | .0714 | .286 | .786 | .435 | .482 | .646 | .418 |
-
+| Feature              | Correlation        |
+|----------------------|--------------------|
+| year                 | .20006951080321003 |
+| gender               | .6246841869387962  |
+| heightInches         | .5127640979231713  |
+| happiness            | .3239844925444457  |
+| stressed             | .23023404061307842 |
+| sleepPerNight        | .18545341485212338 |
+| socialDinnerPerWeek  | .6274694517652297  |
+| alcoholDrinksPerWeek | .39030925537015787 |
+| caffeineRating       | .907103732745937   |
+| affiliated           | .6455153720043185  |
+| numOfLanguages       | .4348823907557477  |
+| gymPerWeek           | .48210511326220234 |
+| hoursOnScreen        | .6455268993345632  |
+| phoneType            | .41842129085815427 |
