@@ -1,6 +1,9 @@
 Flask==2.0.2
+gplearn==0.4.1
 gunicorn==20.1.0
 numpy==1.21.3
 requests==2.26.0
-scikit_learn==1.0
+scikit_learn==1.0.1
 scipy==1.7.1
+torch==1.10.0
+tqdm==4.62.3
